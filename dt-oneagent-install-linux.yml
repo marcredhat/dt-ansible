@@ -20,6 +20,9 @@
       stat:
         path: /opt/dynatrace/oneagent/agent/lib64/liboneagentos.so
       register: installed
+      
+    # on the target systems, ensure that python is compiled with SSL support
+    # python -c "import ssl; print(ssl.OPENSSL_VERSION)"
     -
       name: "download oneagent install file"
       get_url: 
