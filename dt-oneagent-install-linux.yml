@@ -22,7 +22,7 @@
       register: installed
     -
       name: "download oneagent install file"
-      shell: "sh wget -O /tmp/dynatrace-oneagent-linux-latest.sh "{{ dt_api_endpoint }}deployment/installer/agent/unix/default/latest?arch=x86&flavor=default" --header="Authorization: Api-Token {{ dt_api_token }}" 
+      shell: "sh wget -O /tmp/dynatrace-oneagent-linux-latest.sh {{ dt_api_endpoint }}deployment/installer/agent/unix/default/latest?arch=x86&flavor=default" --header="Authorization: Api-Token {{ dt_api_token }}" 
       #https://eyexxxx.live.dynatrace.com/api/v1/deployment/installer/agent/unix/default/latest?arch=x86&flavor=default" --header="Authorization: Api-Token llllll"
       #url: "{{ dt_api_endpoint }}deployment/installer/agent/unix/default/latest?Api-Token={{ dt_api_token }}&arch=x86&flavor=default"
       #  dest: /tmp/dynatrace-oneagent-linux-latest.sh
